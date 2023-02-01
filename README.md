@@ -2,7 +2,7 @@
 ข้อนี้เป็นไปตามโจทย์ใน google doc ที่พี่ทิ้งไว้ให้ ซึ่งตัวนี้เป็นแค่ template ที่เอาไว้ให้เฉยๆ หากน้องมีแนวทางการเขียนโค้ดแบบไหนก็ปรับเปลี่ยนได้เลยตามใจชอบ ขอแค่ผลลัพธ์ถูกต้องตามโจทย์ก็เพียงพอ
 
 ในทางที่ดีงานนี้ควรแบ่งทำกัน 2 คน คือ
-- คนเขียนฟังก์ชันในการ GET POST (ใน lib -> traffic)
+- คนเขียนฟังก์ชันในการ GET POST (ใน src -> traffic.h)
 - คนเขียน state ต่างๆ (ใน src -> main.cpp)
 
 โค้ดเขียนไว้บางส่วนแล้ว สามารถเติมเพิ่มตรง 
@@ -35,21 +35,21 @@ const char *password = "Your Wifi Password";
 ## Point
 ไปเปลี่ยนตาม point ของเราด้วย (point == กลุ่มที่)
 ``` c
-// lib/traffic/traffic.h
+// src/traffic.h
 const String point = "กลุ่มที่";
 const int nearby_1 = "กลุ่มใกล้เคียง (กลุ่มที่ +-1)";
 const int nearby_2 = "กลุ่มใกล้เคียง (กลุ่มที่ +-1)";
 ```
 
 ## GET_traffic
-อยู่ใน `lib/traffic/traffic.cpp`
+อยู่ใน `src/traffic.h`
 
 จะขาดส่วน แสดงผล ซึ่งอาจจะต้องใช้ `JsonArray`, `JsonObject`, `JsonPair` (แล้วแต่กลุ่มเลย บางกลุ่มอาจไม่ต้องใช้ก็ได้)
 
 สามารถดูตัวอย่างและนำมาปรับใช้ได้จาก[ที่นี่](https://stackoverflow.com/questions/71023794/getting-json-keys-from-an-array-from-an-object-using-arduinojson)
 
 ## POST_traffic
-อยู่ใน `lib/traffic/traffic.cpp`
+อยู่ใน `src/traffic.h`
 
 แทบไม่ต่างจากในตัวอย่างเลย เพิ่มเติมคือมันจะรับตัวแปร `String led` ที่เป็นตัวบอกว่า led ตอนนี้สีอะไร ดังนั้นน้องเหลือแค่เติมการใส่ข้อมูลลง `doc` ให้ถูกต้องก็เพียงพอ
 

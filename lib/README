@@ -8,14 +8,9 @@ The source code of each library should be placed in a an own separate directory
 For example, see a structure of the following two libraries `Foo` and `Bar`:
 
 |--lib
-|  |
-|  |--traffic
-|  |  |- traffic.cpp
-|  |  |- traffic.h
-|  |
-|  |- README --> THIS FILE
 |
 |- platformio.ini
 |--src
    |- main.cpp
+   |- traffic.h
 
