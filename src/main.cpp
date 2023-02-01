@@ -84,7 +84,7 @@ void POST_traffic(String led)
   // .
   serializeJson(doc, json);
 
-  // Serial.println("POST " + led);
+  Serial.println("POST " + led);
   int httpResponseCode = http.POST(json);
   if (httpResponseCode == 200)
   {
