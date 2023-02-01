@@ -35,7 +35,7 @@ void GET_traffic()
 
   Serial.println("Nearby traffic");
   int httpResponseCode = http.GET();
-  if (httpResponseCode > 0)
+  if (httpResponseCode == 200)
   {
     String payload = http.getString();
     deserializeJson(doc, payload);
