@@ -1,7 +1,6 @@
 // If you want to run in WOKWi
 // change pin and wifi
 #include <Arduino.h>
-#include <WiFi.h>
 #include <HTTPClient.h>
 #include <ArduinoJson.h>
 #include <Bounce2.h>
