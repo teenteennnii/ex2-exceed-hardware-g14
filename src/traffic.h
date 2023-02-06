@@ -5,9 +5,9 @@
 
 const String baseUrl = "https://exceed-hardware-stamp465.koyeb.app";
 
-const String point = "กลุ่มที่";
-const int nearby_1 = "กลุ่มใกล้เคียง (กลุ่มที่ +-1)";
-const int nearby_2 = "กลุ่มใกล้เคียง (กลุ่มที่ +-1)";
+const String point = "14";
+const int nearby_1 = "13";
+const int nearby_2 = "15";
 
 void GET_traffic()
 {
@@ -22,7 +22,7 @@ void GET_traffic()
   {
     String payload = http.getString();
     deserializeJson(doc, payload);
-
+    Serial.print(payload);
     // *** write your code here ***
     // set up JSON
     // .
