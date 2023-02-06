@@ -39,6 +39,11 @@ void loop()
 {
   // *** write your code here ***
   // Your can change everything that you want
+  debouncer.update();
+    if ( debouncer.fell() ) { 
+      count++;
+    }
+    
   if (state == 1)
   {
     // while led GREEN
