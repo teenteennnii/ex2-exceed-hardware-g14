@@ -42,14 +42,23 @@ void loop()
   if (state == 1)
   {
     // while led GREEN
+    digitalWrite(red, LOW);
+    digitalWrite(yellow, LOW);
+    digitalWrite(green, HIGH);
   }
   else if (state == 2)
   {
     // while led YELLOW
+    digitalWrite(red, LOW);
+    digitalWrite(green, LOW);
+    digitalWrite(yellow, HIGH);
   }
   else if (state == 3)
   {
     // while led RED
+     digitalWrite(yellow, LOW);
+     digitalWrite(green, LOW);
+    digitalWrite(red, HIGH);
   }
 }
 
