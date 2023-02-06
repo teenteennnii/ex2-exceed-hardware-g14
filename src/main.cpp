@@ -6,13 +6,11 @@
 #include <Bounce2.h>
 #include "traffic.h"
 
-#define red <led red pin>
-#define yellow <led yellow pin>
-#define green <led green pin>
-#define ldr <ldr pin>
-#define button <button pin>
-
-#define light <แสดงมันมืด มีค่าเท่าไหร่>
+#define red 26
+#define yellow 25
+#define green 33
+#define ldr 34
+#define button 27
 
 int state = 1;
 int count = 0;
