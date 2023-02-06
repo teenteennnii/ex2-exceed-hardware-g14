@@ -22,12 +22,14 @@ void GET_traffic()
   {
     String payload = http.getString();
     deserializeJson(doc, payload);
-    Serial.print(payload);
+    // Serial.print(payload);
     Serial.print("Point : ");
     Serial.println((const char*)doc["all_traffic"][nearby_1-1]["point"]);
     Serial.print("Traffic : ");
     Serial.println((const char*)doc["all_traffic"][nearby_1-1]["traffic"]);
+    Serial.print("Point : ");
     Serial.println((const char*)doc["all_traffic"][nearby_2-1]["point"]);
+    Serial.print("Traffic : ");
     Serial.println((const char*)doc["all_traffic"][nearby_2-1]["traffic"]);
   }
   else
