@@ -39,6 +39,8 @@ void loop()
 {
   // *** write your code here ***
   // Your can change everything that you want
+  int light = map(analogRead(ldr),2000,4700,0,255);
+
   debouncer.update();
     if ( debouncer.fell() ) { 
       if (state == 1){
@@ -68,6 +70,9 @@ void loop()
     digitalWrite(yellow, LOW);
     digitalWrite(green, LOW);
     digitalWrite(red, HIGH);
+    if (light < 150){
+      state = 1;
+    }
   }
 }
 
