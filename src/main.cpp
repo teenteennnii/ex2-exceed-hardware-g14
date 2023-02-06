@@ -16,7 +16,7 @@ int state = 1;
 int count = 0;
 Bounce debouncer = Bounce();
 
-// void Connect_Wifi();
+void Connect_Wifi();
 
 void setup()
 {
@@ -27,7 +27,7 @@ void setup()
   pinMode(ldr, INPUT);
   debouncer.attach(button, INPUT_PULLUP);
   debouncer.interval(25);
-  // Connect_Wifi();
+  Connect_Wifi();
 
   delay(200);
   // start LED with GREEN and POST to database
@@ -51,6 +51,7 @@ void loop()
   if (state == 1)
   {
     // while led GREEN
+    // POST_traffic("green");
     digitalWrite(red, LOW);
     digitalWrite(yellow, LOW);
     digitalWrite(green, HIGH);
@@ -58,6 +59,7 @@ void loop()
   else if (state == 2)
   {
     // while led YELLOW
+    // POST_traffic("yellow");
     digitalWrite(red, LOW);
     digitalWrite(green, LOW);
     digitalWrite(yellow, HIGH);
@@ -67,6 +69,7 @@ void loop()
   else if (state == 3)
   {
     // while led RED
+    // POST_traffic("red");
     digitalWrite(yellow, LOW);
     digitalWrite(green, LOW);
     digitalWrite(red, HIGH);
